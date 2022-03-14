@@ -6,10 +6,10 @@ import '../styles/global.scss'
 function MyApp({ Component, pageProps }: AppProps) {
   return(
    <>
-   <Component {...pageProps} />
-   <Header />
+    <Header />
+    <Component {...pageProps} />
    </>
-)
+  )
 }
 
 export default MyApp
