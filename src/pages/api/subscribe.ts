@@ -27,7 +27,7 @@ export default async function subscribe (req:  NextApiRequest, res: NextApiRespo
                 )
             )
         )
-
+        console.log(user.ref.id)
 
         let customerId = user.data.stripe_customer_id
 
@@ -58,7 +58,7 @@ export default async function subscribe (req:  NextApiRequest, res: NextApiRespo
             line_items: [
                 {price:'price_1KdajTBpft93nzrgYcgCshWG', quantity:1}
             ],
-            mode: 'subscription',
+            mode:'subscription',
             allow_promotion_codes: true,
             success_url:process.env.STRIPE_SUCCESS_URL,
             cancel_url:process.env.STRIPE_CANCEL_URL
